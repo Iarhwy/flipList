@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+h1 {
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   text-align: center;
+}
+
+.flip__container {
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.flip__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0;
+}
+
+.flip__list li + li {
+    margin-top: 1rem;
+}
+
+.flip__item {
+    cursor: pointer;
+    background-color: #b4c4f2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 4px 4px 3px black;
+    border-radius: 10px;
+}
+
+.flip__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
+    background-color: grey;
+    margin-right: 2rem;
+    outline: 2px outset #93be2d;
+    outline-offset: 3px;
+}
+
+.flip__item.expanded .flip__avatar {
+    width: 8rem;
+    height: 8rem;
+    margin-right: 0;
+    margin-bottom: 1rem;
+    outline: 3px outset #93be2d;
+    outline-offset: 5px;
+}
+
+.flip__fio {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 21px;
+    letter-spacing: -1px;
+}
+
+.flip__prof {
+    font-family: 'Anonymous Pro', monospace;
+    font-size: 15px;
+}
+
+.flip__job {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 15px;
+}
+
+.flip__line:nth-of-type(2) {
+    width: 11rem;
+}
+
+.flip__line:nth-of-type(3) {
+    width: 8rem;
+}
+
+.flip__line + .flip__line {
+    margin-top: .5rem;
+}
+
+.flip__item.expanded .flip__description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.flip__item.expanded {
+    background-color: #b4c4f2;
+    padding: 2rem;
+    flex-direction: column;
+}
+
+.flip__additional {
+    width: 100%;
+    margin-top: 2rem;
+    display: none;
+}
+
+.flip__item.expanded .flip__additional {
+    display: block;
+}
+
+.flip__chunk {
+    border-radius: 3px;
+    background-color: gray;
+    height: 8rem;
+    opacity: 0;
+    width: 100%;
+    object-fit: cover;
+}
+
+.flip__item.expanded .flip__chunk {
+    opacity: 1;
+}
+
+.flip__chunk + .flip__chunk {
+    margin-top: 1rem;
+}
