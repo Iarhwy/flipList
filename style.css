@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 h1, h2, h3 {
@@ -18,8 +19,13 @@ h1 {
 
 .flip__list {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 100vh;
     padding: 0;
 }
@@ -31,11 +37,19 @@ h1 {
 .flip__item {
     cursor: pointer;
     background-color: #b4c4f2;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1rem;
-    box-shadow: 4px 4px 3px black;
+    -webkit-box-shadow: 4px 4px 3px black;
+            box-shadow: 4px 4px 3px black;
     border-radius: 10px;
 }
 
@@ -87,16 +101,26 @@ h1 {
 }
 
 .flip__item.expanded .flip__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
 }
 
 .flip__item.expanded {
     background-color: #b4c4f2;
     padding: 2rem;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .flip__additional {
@@ -115,7 +139,8 @@ h1 {
     height: 8rem;
     opacity: 0;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .flip__item.expanded .flip__chunk {
